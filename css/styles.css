@@ -1,0 +1,137 @@
+/* ------------------------------
+   BASIC PAGE STYLES
+--------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7fafc;
+  color: #1a202c;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+.page-wrapper {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+}
+
+.page-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #4a5568;
+}
+
+/* ------------------------------
+   FILTER BUTTONS
+--------------------------------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background-color: #e2e8f0;
+  color: #1a202c;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: #805ad5;
+  color: #ffffff;
+}
+
+/* ------------------------------
+   CARD GRID
+--------------------------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 1rem 1rem 1.25rem;
+}
+
+.category-label {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #805ad5;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+  color: #4a5568;
+}
+
+/* ------------------------------
+   RESPONSIVE TYPE
+--------------------------------- */
+
+/* @media (max-width: 700px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+} */
