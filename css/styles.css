@@ -14,15 +14,23 @@ body {
   line-height: 1.6;
 }
 
+/* Make images behave more predictably.
+   display: block removes extra space under images.
+   max-width: 100% keeps images from overflowing. */
 img {
   display: block;
   max-width: 100%;
 }
 
+/* Make buttons use the same font as the rest of the page. */
 button {
   font: inherit;
 }
 
+/* Main page container.
+   width: 90% gives some side spacing.
+   max-width prevents the page from getting too wide.
+   margin: 0 auto centers it. */
 .page-wrapper {
   width: 90%;
   max-width: 1150px;
@@ -30,26 +38,37 @@ button {
   padding: 2rem 0 3rem;
 }
 
+/* Center the top heading area and add spacing below it. */
 .page-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
+/* Style the main heading. */
 .page-header h1 {
   margin-bottom: 0.5rem;
   font-size: 2.25rem;
 }
 
+/* Limit the paragraph width so it is easier to read. */
 .page-header p {
   max-width: 700px;
   margin: 0 auto;
   color: #4a5568;
 }
 
+/* Reusable section heading style. */
+.section-heading {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
 /* ------------------------------
    FILTER BUTTONS
 --------------------------------- */
 
+/* Arrange the buttons in a flexible row that can wrap
+   onto multiple lines if needed. */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -58,6 +77,7 @@ button {
   margin-bottom: 2rem;
 }
 
+/* Style the filter buttons. */
 .filter-btn {
   padding: 0.7rem 1.2rem;
   border: none;
@@ -68,11 +88,14 @@ button {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* Change the button appearance on hover. */
 .filter-btn:hover {
   background-color: #cbd5e0;
   transform: translateY(-2px);
 }
 
+/* Style the currently selected button.
+   This class is added and removed with jQuery. */
 .filter-btn.active {
   background-color: #805ad5;
   color: #ffffff;
@@ -82,12 +105,14 @@ button {
    CARD GRID
 --------------------------------- */
 
+/* Create a responsive grid of cards. */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
+/* Style each project card like a card or panel. */
 .card {
   background-color: #ffffff;
   border-radius: 18px;
@@ -95,16 +120,19 @@ button {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+/* Make the card image fill the top area neatly. */
 .card img {
   width: 100%;
   aspect-ratio: 5 / 3;
   object-fit: cover;
 }
 
+/* Add padding inside the text area of each card. */
 .card-text {
   padding: 1rem 1rem 1.25rem;
 }
 
+/* Style the small category label. */
 .category-label {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -115,23 +143,72 @@ button {
   letter-spacing: 0.04em;
 }
 
+/* Style the project title. */
 .card h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
 
+/* Style the final paragraph inside each card. */
 .card p:last-child {
   margin-bottom: 0;
   color: #4a5568;
 }
 
 /* ------------------------------
-   RESPONSIVE TYPE
+   EXPLANATION SECTION
 --------------------------------- */
 
-/* @media (max-width: 700px) {
-  .page-header h1 {
-    font-size: 1.8rem;
-  }
-} */
+/* Style the explanation box under the card grid. */
+.code-explanation {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+hr.line {
+  border: none;
+  border-top: 1px solid silver;
+  margin: 2rem 0 0 0;
+}
+
+/* Add extra space above smaller headings. */
+.code-explanation h3 {
+  margin-top: 1.5rem;
+}
+
+/* Add spacing under lists and definition lists. */
+.code-explanation ul,
+.code-explanation ol,
+.code-explanation dl {
+  margin-bottom: 1.25rem;
+}
+
+.code-explanation li {
+  margin: 0 0 0.5rem 1rem;
+}
+
+/* Style definition list terms. */
+.code-explanation dt {
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
+/* Style the definition descriptions. */
+.code-explanation dd {
+  margin-left: 0;
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+}
+
+/* Style inline code so it stands out visually. */
+.code-explanation code {
+  font-family: Consolas, Monaco, monospace;
+  background-color: #edf2f7;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+

@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page setup -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Text shown in the browser tab -->
   <title>Browse Creative Projects</title>
+
+  <!-- CSS files -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Local jQuery files -->
+  <!-- Local jQuery file -->
   <script src="js/jquery-3.7.1.js"></script>
-  <script src="js/script.js"></script>
+
+  <!-- Our custom JavaScript file -->
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
+  <!-- Main page wrapper -->
   <main class="page-wrapper">
+
+    <!-- Page heading and directions -->
     <header class="page-header">
       <h1>Browse Creative Projects</h1>
       <p>
@@ -22,6 +32,7 @@
     </header>
 
     <!-- Filter buttons -->
+    <!-- These buttons control which cards are shown -->
     <section class="filters">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="web">Web</button>
@@ -31,7 +42,9 @@
     </section>
 
     <!-- Card grid -->
+    <!-- Each card belongs to one category using a class like web, design, photo, or video -->
     <section class="card-grid">
+
       <article class="card web">
         <img src="https://placehold.co/600x380/805ad5/ffffff?text=Band+Website" alt="Band Website Redesign project">
         <div class="card-text">
@@ -51,16 +64,16 @@
       </article>
 
       <article class="card design">
-        <img src="https://placehold.co/600x380/dd6b20/ffffff?text=Event+Poster" alt="Event Poster Series project">
+        <img src="https://placehold.co/600x380/dd6b20/ffffff?text=Event+Poster" alt="Event Poster project">
         <div class="card-text">
           <p class="category-label">Design</p>
           <h2>Event Poster</h2>
-          <p>A set of promotional posters designed for a campus arts festival.</p>
+          <p>A set of promotional posters designed for a campus art festival.</p>
         </div>
       </article>
 
       <article class="card design">
-        <img src="https://placehold.co/600x380/c05621/ffffff?text=Logo/Brand+Kit" alt="Logo/Brand Kit project">
+        <img src="https://placehold.co/600x380/c05621/ffffff?text=Logo+Brand+Kit" alt="Logo and Brand Kit project">
         <div class="card-text">
           <p class="category-label">Design</p>
           <h2>Logo and Brand Kit</h2>
@@ -78,7 +91,7 @@
       </article>
 
       <article class="card photo">
-        <img src="https://placehold.co/600x380/2b6cb0/ffffff?text=Street+Photography" alt="Street Photography">
+        <img src="https://placehold.co/600x380/2b6cb0/ffffff?text=Street+Photography" alt="Street Photography project">
         <div class="card-text">
           <p class="category-label">Photo</p>
           <h2>Street Photography</h2>
@@ -87,7 +100,7 @@
       </article>
 
       <article class="card video">
-        <img src="https://placehold.co/600x380/38a169/ffffff?text=Documentary+Promo" alt="Mini Documentary Promo project">
+        <img src="https://placehold.co/600x380/38a169/ffffff?text=Documentary+Promo" alt="Documentary Promo project">
         <div class="card-text">
           <p class="category-label">Video</p>
           <h2>Documentary Promo</h2>
@@ -96,14 +109,98 @@
       </article>
 
       <article class="card video">
-        <img src="https://placehold.co/600x380/2f855a/ffffff?text=Social+Media+Video" alt="Social Media Video Ad project">
+        <img src="https://placehold.co/600x380/2f855a/ffffff?text=Social+Media+Video" alt="Social Media Video project">
         <div class="card-text">
           <p class="category-label">Video</p>
           <h2>Social Media Video</h2>
           <p>A short-form video ad designed for a scrolling social media audience.</p>
         </div>
       </article>
+
     </section>
+
+    <!-- Explanation section -->
+     <hr class="line">
+    <section class="code-explanation">
+      <h2 class="section-heading">How This HTML Works</h2>
+
+      <p>
+        This page is built as a filterable project gallery. The buttons at the top let the user choose which type of work to display.
+      </p>
+
+      <h3>How the page is organized</h3>
+      <ol>
+        <li>The <code>&lt;head&gt;</code> contains setup information, CSS links, and JavaScript links.</li>
+        <li>The <code>&lt;body&gt;</code> contains the visible content of the page.</li>
+        <li>The filter button section contains clickable buttons.</li>
+        <li>The card grid section contains all of the project cards.</li>
+      </ol>
+
+      <h3>How the interactive part works</h3>
+      <p>
+        Each button has a <code>data-filter</code> attribute that stores a category name like
+        <code>web</code>, <code>design</code>, <code>photo</code>, or <code>video</code>.
+      </p>
+
+      <p>
+        Each project card has the class <code>card</code> plus a category class like
+        <code>web</code> or <code>photo</code>.
+      </p>
+
+      <p>
+        When a button is clicked, JavaScript reads the button’s <code>data-filter</code> value
+        and then shows only the cards that match that category.
+      </p>
+
+      <h3>Why use classes on the cards?</h3>
+      <p>
+        Classes can be reused on multiple elements. Since more than one card can belong to the same
+        category, classes make filtering easier.
+      </p>
+
+      <h3>Why use data-filter on the buttons?</h3>
+      <p>
+        The <code>data-filter</code> attribute stores extra information directly in the HTML.
+        JavaScript can read that information when the user clicks a button.
+      </p>
+
+      <h2 class="section-heading">Glossary of HTML Terms</h2>
+      <dl>
+        <dt><code>&lt;button&gt;</code></dt>
+        <dd>A clickable button element.</dd>
+
+        <dt><code>&lt;article&gt;</code></dt>
+        <dd>A self-contained piece of content, such as one project card.</dd>
+
+        <dt><code>class</code></dt>
+        <dd>Used for styling or scripting multiple elements.</dd>
+
+        <dt><code>data-filter</code></dt>
+        <dd>A custom data attribute that stores the category a button should filter.</dd>
+
+        <dt><code>section</code></dt>
+        <dd>Groups related content together.</dd>
+
+        <dt><code>img</code></dt>
+        <dd>Displays an image.</dd>
+      </dl>
+
+      <h2 class="section-heading">Important IDs and Classes</h2>
+      <ul>
+        <li><code>page-wrapper</code> - Main layout container for the page</li>
+        <li><code>page-header</code> - Styles the page heading area</li>
+        <li><code>filters</code> - Wraps the filter buttons</li>
+        <li><code>filter-btn</code> - Applied to every filter button</li>
+        <li><code>active</code> - Marks the selected filter button</li>
+        <li><code>card-grid</code> - Layout container for the project cards</li>
+        <li><code>card</code> - Applied to every project card</li>
+        <li><code>web</code>, <code>design</code>, <code>photo</code>, <code>video</code> - Category classes used for filtering</li>
+        <li><code>card-text</code> - Wraps the text inside each card</li>
+        <li><code>category-label</code> - Styles the category label inside each card</li>
+      </ul>
+    </section>
+
   </main>
+
 </body>
 </html>
