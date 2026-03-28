@@ -9,9 +9,10 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7fafc;
+  background-color: #cfcfcf;
   color: #1a202c;
   line-height: 1.6;
+  padding: 1rem;
 }
 
 /* Make images behave more predictably.
@@ -31,27 +32,27 @@ button {
    width: 90% gives some side spacing.
    max-width prevents the page from getting too wide.
    margin: 0 auto centers it. */
-.page-wrapper {
+.wrapper {
   width: 90%;
-  max-width: 1150px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 0 3rem;
 }
 
 /* Center the top heading area and add spacing below it. */
-.page-header {
+header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
 /* Style the main heading. */
-.page-header h1 {
+header h1 {
   margin-bottom: 0.5rem;
   font-size: 2.25rem;
 }
 
 /* Limit the paragraph width so it is easier to read. */
-.page-header p {
+header p {
   max-width: 700px;
   margin: 0 auto;
   color: #4a5568;
@@ -62,6 +63,7 @@ button {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
+
 
 /* ------------------------------
    FILTER BUTTONS
@@ -101,6 +103,7 @@ button {
   color: #ffffff;
 }
 
+
 /* ------------------------------
    CARD GRID
 --------------------------------- */
@@ -110,6 +113,10 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 2px solid silver;
 }
 
 /* Style each project card like a card or panel. */
@@ -117,7 +124,7 @@ button {
   background-color: #ffffff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Make the card image fill the top area neatly. */
@@ -155,6 +162,11 @@ button {
   margin-bottom: 0;
   color: #4a5568;
 }
+
+
+
+
+
 
 /* ------------------------------
    EXPLANATION SECTION
