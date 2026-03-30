@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic page setup -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Text shown in the browser tab -->
   <title>Browse Creative Projects</title>
-
-  <!-- CSS files -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -16,7 +11,7 @@
   <script src="js/jquery-3.7.1.js"></script>
 
   <!-- Our custom JavaScript file -->
-  <script src="js/script.js" defer></script>
+  <script src="js/filter-cards.js" defer></script>
 </head>
 <body>
 
@@ -26,9 +21,7 @@
     <!-- Page heading and directions -->
     <header>
       <h1>Browse Creative Projects</h1>
-      <p>
-        Use the category buttons to filter this collection of creative media work.
-      </p>
+      <p>Use the category buttons to filter this collection of creative media work.</p>
     </header>
 
     <!-- Filter buttons -->
@@ -119,8 +112,10 @@
 
     </section>
 
+
+
     <!-- Explanation section -->
-     <hr class="line">
+    <hr class="line">
     <section class="code-explanation">
       <h2 class="section-heading">How This HTML Works</h2>
 
@@ -135,6 +130,14 @@
         <li>The filter button section contains clickable buttons.</li>
         <li>The card grid section contains all of the project cards.</li>
       </ol>
+
+      <h3>How the card layout works</h3>
+<p>
+  The cards are placed inside a CSS Grid container. The grid uses
+  <code>repeat(auto-fit, minmax(240px, 1fr))</code>, which allows the browser
+  to automatically decide how many columns can fit while keeping each card at
+  least 240 pixels wide.
+</p>
 
       <h3>How the interactive part works</h3>
       <p>
@@ -185,22 +188,21 @@
         <dd>Displays an image.</dd>
       </dl>
 
-      <h2 class="section-heading">Important IDs and Classes</h2>
+      <h2 class="section-heading">Important Elements and Classes</h2>
       <ul>
-        <li><code>page-wrapper</code> - Main layout container for the page</li>
-        <li><code>page-header</code> - Styles the page heading area</li>
+        <li><code>wrapper</code> - Main layout container for the page</li>
+        <li><code>&lt;header&gt;</code> - Contains the page heading and intro text</li>
         <li><code>filters</code> - Wraps the filter buttons</li>
         <li><code>filter-btn</code> - Applied to every filter button</li>
-        <li><code>active</code> - Marks the selected filter button</li>
-        <li><code>card-grid</code> - Layout container for the project cards</li>
+        <li><code>active</code> - Marks the currently selected filter button</li>
+        <li><code>card-grid</code> - Grid container that holds all of the project cards</li>
         <li><code>card</code> - Applied to every project card</li>
         <li><code>web</code>, <code>design</code>, <code>photo</code>, <code>video</code> - Category classes used for filtering</li>
-        <li><code>card-text</code> - Wraps the text inside each card</li>
+        <li><code>card-text</code> - Wraps the text content inside each card</li>
         <li><code>category-label</code> - Styles the category label inside each card</li>
       </ul>
     </section>
 
-  </>
 
 </body>
 </html>

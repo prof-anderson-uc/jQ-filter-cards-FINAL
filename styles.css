@@ -1,76 +1,8 @@
 /* ------------------------------
-   BASIC PAGE STYLES
---------------------------------- */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #cfcfcf;
-  color: #1a202c;
-  line-height: 1.6;
-  padding: 1rem;
-}
-
-/* Make images behave more predictably.
-   display: block removes extra space under images.
-   max-width: 100% keeps images from overflowing. */
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* Make buttons use the same font as the rest of the page. */
-button {
-  font: inherit;
-}
-
-/* Main page container.
-   width: 90% gives some side spacing.
-   max-width prevents the page from getting too wide.
-   margin: 0 auto centers it. */
-.wrapper {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 0 3rem;
-}
-
-/* Center the top heading area and add spacing below it. */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Style the main heading. */
-header h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2.25rem;
-}
-
-/* Limit the paragraph width so it is easier to read. */
-header p {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #4a5568;
-}
-
-/* Reusable section heading style. */
-.section-heading {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-
-/* ------------------------------
    FILTER BUTTONS
 --------------------------------- */
 
-/* Arrange the buttons in a flexible row that can wrap
-   onto multiple lines if needed. */
+/* Arranges buttons in a flexible row that can wrap onto multiple lines if needed. */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -83,9 +15,9 @@ header p {
 .filter-btn {
   padding: 0.7rem 1.2rem;
   border: none;
-  border-radius: 999px;
+  border-radius: 2rem;
   background-color: #e2e8f0;
-  color: #1a202c;
+  color: black;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
@@ -100,7 +32,7 @@ header p {
    This class is added and removed with jQuery. */
 .filter-btn.active {
   background-color: #805ad5;
-  color: #ffffff;
+  color: white;
 }
 
 
@@ -108,7 +40,13 @@ header p {
    CARD GRID
 --------------------------------- */
 
-/* Create a responsive grid of cards. */
+/* Create a responsive grid of cards.
+   minmax(240px, 1fr) means:
+   - each column should be at least 240px wide
+   - but it can grow larger if extra space is available
+
+   This allows the browser to automatically decide how many columns
+   can fit in each row without needing media queries. */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -118,6 +56,7 @@ header p {
   border-radius: 18px;
   border: 2px solid silver;
 }
+
 
 /* Style each project card like a card or panel. */
 .card {
@@ -165,6 +104,72 @@ header p {
 
 
 
+
+/* ------------------------------
+   BASIC PAGE STYLES
+--------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfcfcf;
+  color: #1a202c;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Make images behave more predictably.
+   display: block removes extra space under images.
+   max-width: 100% keeps images from overflowing. */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Make buttons use the same font as the rest of the page. */
+button {
+  font: inherit;
+}
+
+/* Main page container.
+   width: 90% gives some side spacing.
+   max-width prevents the page from getting too wide.
+   margin: 0 auto centers it. */
+.wrapper {
+  width: 90%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Center the top heading area and add spacing below it. */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Style the main heading. */
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+}
+
+/* Limit the paragraph width so it is easier to read. */
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #4a5568;
+}
+
+/* Reusable section heading style. */
+.section-heading {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
 
 
 
