@@ -141,7 +141,7 @@ button {
    margin: 0 auto centers it. */
 .wrapper {
   width: 90%;
-  max-width: 2000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
 }
